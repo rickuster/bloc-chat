@@ -1,2 +1,2 @@
-<h1>Home Page</h1>
-<div ng-repeat="room in HomeCtrl.rooms"></div>
+<h1>Bloc Chat</h1>
+<div ng-repeat="room in home.rooms track by $index">{{room.$id}}</div>
