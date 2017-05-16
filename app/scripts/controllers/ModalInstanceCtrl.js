@@ -2,12 +2,8 @@
 
 (function(){
     function ModalInstanceCtrl($uibModalInstance){
-        this.data = {
-            roomName:""  
-        };
-        this.ok = function(){
-            alert('data entered was: ' + this.data.roomName);
-            $uibModalInstance.close(this.data.roomName);
+        this.ok = function(name){
+            $uibModalInstance.close(name);
         };
         
         this.cancel = function(){

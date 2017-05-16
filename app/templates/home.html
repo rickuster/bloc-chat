@@ -1,6 +1,24 @@
-<h1>Bloc Chat</h1>
-<div ng-repeat="room in home.rooms track by $index">{{room.$id}}</div>
+<head>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-3 no-float" id="leftCol">
+            <ul class="nav nav-stacked" id="sidebar">
+                <div class="test" ng-controller="ModalCtrl as modal">
+                    <h1>Bloc Chat</h1>
+                    <button class="btn btn-default" type="button" ng-click="modal.open()">Create room</button>
+                </div>
+                <div ng-repeat="room in home.rooms track by $index">{{room.name}}</div>
+            </ul>
+          </div>
+          <div class="col-md-9 no-float">Content</div>
+        </div>
+    </div>
+</body>
 
-<div ng-controller="ModalCtrl as modal">
-    <button class="btn btn-default" type="button" ng-click="modal.open()">Create room</button>
-</div>
+
+
+
+

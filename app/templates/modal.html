@@ -1,18 +1,14 @@
 <!-- defines the layout UI of the add room prompt -->
-<div ng-controller="ModalCtrl as modal" class="modal-demo">
-
         <div class="modal-header">
-            <h2 class="modal-title" id="modal-title">Create a new room</h3>
+            <h2 class="modal-title" id="modal-title">Create a new room</h2>
         </div>
         <div class="modal-body" id="modal-body">
-            <h3>Enter a room name</h2>
+            <h3>Enter a room name</h3>
             <form>
                 <input type="text" ng-model="roomName" />
             </form>
         </div>
         <div class="modal-footer">
-            <button class="btn btn-primary" type="button" ng-click="modal.ok()">OK</button>
+            <button class="btn btn-primary" type="button" ng-click="modal.ok(roomName)">OK</button>
             <button class="btn btn-warning" type="button" ng-click="modal.cancel()">Cancel</button>
         </div>
-
-</div>

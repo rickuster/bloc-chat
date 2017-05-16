@@ -12,7 +12,7 @@
             });
             
             modalInstance.result.then(function(data){
-                Room.addRoom(data);
+                Room.add(data);
             });
         }
     }
