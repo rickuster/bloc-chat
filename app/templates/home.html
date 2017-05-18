@@ -10,10 +10,11 @@
                     <h1>Bloc Chat</h1>
                     <button class="btn btn-default" type="button" ng-click="modal.open()">Create room</button>
                 </div>
-                <div ng-repeat="room in home.rooms track by $index">{{room.name}}</div>
+                <div ng-repeat="room in home.rooms track by $index"><a href="" ng-click="home.setRoom(room.name);home.setMessages(room.$id)">{{room.name}}</a></div> 
             </ul>
           </div>
-          <div class="col-md-9 no-float">Content</div>
+          <div class="col-md-9 no-float"><h1>{{home.roomName}}</h1></div>
+          <div ng-repeat="message in home.message track by $index">{{message.content}}</div>
         </div>
     </div>
 </body>
