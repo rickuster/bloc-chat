@@ -4,7 +4,7 @@
 <body>
     <div class="container">
         <div class="row">
-          <div class="col-md-3 no-float" id="leftCol">
+          <div class="col-sm-3 no-float" id="leftCol">
             <ul class="nav nav-stacked" id="sidebar">
                 <div class="test" ng-controller="ModalCtrl as modal">
                     <h1>Bloc Chat</h1>
@@ -13,8 +13,22 @@
                 <div ng-repeat="room in home.rooms track by $index"><a href="" ng-click="home.setRoom(room.name);home.setMessages(room.$id)">{{room.name}}</a></div> 
             </ul>
           </div>
-          <div class="col-md-9 no-float"><h1>{{home.roomName}}</h1></div>
-          <div ng-repeat="message in home.message track by $index">{{message.content}}</div>
+          <div class="col-sm-9 no-float" id="rightCol">
+              <h1>{{home.roomName}}</h1>
+              <div ng-repeat="message in home.message track by $index">
+                  <div class="row">
+                      <div class="col-md-8 no-float" id="leftCol2">
+                          <b>{{message.username}}</b><br>
+                          <p>{{message.content}}</p>
+                      </div>
+                      <div class="col-md-4 no-float" id="rightCol2">
+                        <p>{{message.sentAt}}</p>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+          
         </div>
     </div>
 </body>

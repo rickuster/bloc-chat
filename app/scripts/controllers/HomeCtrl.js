@@ -7,7 +7,6 @@
             this.roomName = roomName;
         }
         this.setMessages = function(id){
-            alert(id);
             this.message = Message.getByRoomId(id);
         }
     }

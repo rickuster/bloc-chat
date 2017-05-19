@@ -4,6 +4,24 @@
 
 #leftCol {
     background-color: lightgray;
+    min-width: 320px;
+}
+
+#leftCol2 {
+    float: left;
+    text-align: left;
+    min-width: 600px;
+    padding-left: 0px;
+}
+#rightCol h1 {
+    margin-bottom: 20px;
+}
+#rightCol {
+    min-width: 500px;
+}
+
+#rightCol2 {
+    text-align: right;
 }
 
 .test h1, .test button {
