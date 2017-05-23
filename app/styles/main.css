@@ -1,3 +1,8 @@
+.messagesheader {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
 .test {
     text-align: left;
 }
@@ -7,20 +12,22 @@
     min-width: 320px;
 }
 
-#leftCol2 {
+.leftCol2 {
     float: left;
     text-align: left;
     min-width: 600px;
-    padding-left: 0px;
+    padding-left: 20px;
+    margin-left: 0px;
 }
 #rightCol h1 {
     margin-bottom: 20px;
 }
-#rightCol {
+.rightCol {
     min-width: 500px;
+    padding: 0 0 0 0;
 }
 
-#rightCol2 {
+.rightCol2 {
     text-align: right;
 }
 
@@ -54,4 +61,12 @@ html,body,.container {
 .row .no-float {
   display: table-cell;
   float: none;
+}
+
+.messageRowColor:nth-child(even) {
+    background-color: lightcyan;
+}
+
+.messageRowColor:nth-child(odd) {
+    background-color: #FFF;
 }

@@ -13,19 +13,21 @@
                 <div ng-repeat="room in home.rooms track by $index"><a href="" ng-click="home.setRoom(room.name);home.setMessages(room.$id)">{{room.name}}</a></div> 
             </ul>
           </div>
-          <div class="col-sm-9 no-float" id="rightCol">
-              <h1>{{home.roomName}}</h1>
-              <div ng-repeat="message in home.message track by $index">
-                  <div class="row">
-                      <div class="col-md-8 no-float" id="leftCol2">
+          <div class="col-sm-9 no-float rightCol">
+              <div class="messagesheader">
+                <h1>{{home.roomName}}</h1>
+              </div>
+              <div class="messageRowColor" ng-repeat="message in home.message track by $index">
+                  <div>
+                      <div class="col-md-8 no-float leftCol2">
                           <b>{{message.username}}</b><br>
                           <p>{{message.content}}</p>
                       </div>
-                      <div class="col-md-4 no-float" id="rightCol2">
+                      <div class="col-md-4 no-float rightCol2">
                         <p>{{message.sentAt}}</p>
                       </div>
-                  </div>
-
+                 </div>
+              </div>
               </div>
           </div>
           
