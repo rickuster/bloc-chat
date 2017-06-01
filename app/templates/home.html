@@ -10,7 +10,7 @@
                     <h1>Bloc Chat</h1>
                     <button class="btn btn-default" type="button" ng-click="modal.open()">Create room</button>
                 </div>
-                <div ng-repeat="room in home.rooms track by $index"><a href="" ng-click="home.setRoom(room.name);home.setMessages(room.$id)">{{room.name}}</a></div> 
+                <div ng-repeat="room in home.rooms track by $index"><a href="" ng-click="home.setRoom(room.name);home.setMessages(room.$id);home.showDiv();home.setRoomId(room.$id)">{{room.name}}</a></div> 
             </ul>
           </div>
           <div class="col-sm-9 no-float rightCol">
@@ -28,9 +28,13 @@
                       </div>
                  </div>
               </div>
+              <div ng-show="home.visibility" class="textbox">
+                  <form name="form.testform" data-ng-submit="home.sendMessage(messagetext, home.roomId);home.clearForm()">
+                      <input class="textbox2" type="text" name="messagebox" placeholder="Write your message here..." ng-model="messagetext">
+                      <button type="submit" class="sendbutton">Send</button>
+                  </form> 
               </div>
           </div>
-          
         </div>
     </div>
 </body>

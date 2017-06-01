@@ -70,3 +70,18 @@ html,body,.container {
 .messageRowColor:nth-child(odd) {
     background-color: #FFF;
 }
+
+.textbox {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+.textbox2 {
+    width: 80%;
+}
+
+.sendbutton {
+    width: 20%;
+    margin: 0 0 0 0;
+}
