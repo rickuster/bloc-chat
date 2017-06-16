@@ -29,8 +29,8 @@
                  </div>
               </div>
               <div ng-show="home.visibility" class="textbox">
-                  <form name="form.testform" data-ng-submit="home.sendMessage(messagetext, home.roomId);home.clearForm()">
-                      <input class="textbox2" type="text" name="messagebox" placeholder="Write your message here..." ng-model="messagetext">
+                  <form name="form.testform" data-ng-submit="home.sendMessage(home.newMessage, home.roomId)">
+                      <input class="textbox2" type="text" name="messagebox" placeholder="Write your message here..." ng-model="home.newMessage">
                       <button type="submit" class="sendbutton">Send</button>
                   </form> 
               </div>
